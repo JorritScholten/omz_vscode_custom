@@ -55,18 +55,18 @@ source $ZSH/oh-my-zsh.sh
 
 ## Common aliases
 
-| Alias                   | Command                        | Description                                                                                                 |
-| ----------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| vsc                     | code .                         | Open the current folder in VS code                                                                          |
-| vsc `dir`               | code `dir`                     | Open passed folder in VS code                                                                               |
-| vsca `dir`              | code --add `dir`               | Add folder(s) to the last active window                                                                     |
-| vscd `file` `file`      | code --diff `file` `file`      | Compare two files with each other.                                                                          |
-| vscg `file:line[:char]` | code --goto `file:line[:char]` | Open a file at the path on the specified line and character position.                                       |
-| vscn                    | code --new-window              | Force to open a new window.                                                                                 |
-| vscr                    | code --reuse-window            | Force to open a file or folder in the last active window.                                                   |
-| vscw                    | code --wait                    | Wait for the files to be closed before returning.                                                           |
-| vscu `dir`              | code --user-data-dir `dir`     | Specifies the directory that user data is kept in. Can be used to open multiple distinct instances of Code. |
-| vscp `profile`          | code --profile `profile`       | Specifies the profile to open Code with.                                                                    |
+| Alias                   | Command                        | Description                                                                                                                                 |
+| ----------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| vsc                     | code .                         | Open the current folder in VS code, checks for .code-workspace file in current folder or .vscode sub-folder and opens those preferentially. |
+| vsc `dir`               | code `dir`                     | Open passed folder in VS code                                                                                                               |
+| vsca `dir`              | code --add `dir`               | Add folder(s) to the last active window                                                                                                     |
+| vscd `file` `file`      | code --diff `file` `file`      | Compare two files with each other.                                                                                                          |
+| vscg `file:line[:char]` | code --goto `file:line[:char]` | Open a file at the path on the specified line and character position.                                                                       |
+| vscn                    | code --new-window              | Force to open a new window.                                                                                                                 |
+| vscr                    | code --reuse-window            | Force to open a file or folder in the last active window.                                                                                   |
+| vscw                    | code --wait                    | Wait for the files to be closed before returning.                                                                                           |
+| vscu `dir`              | code --user-data-dir `dir`     | Specifies the directory that user data is kept in. Can be used to open multiple distinct instances of Code.                                 |
+| vscp `profile`          | code --profile `profile`       | Specifies the profile to open Code with.                                                                                                    |
 
 ## Extensions aliases
 
@@ -76,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 | vscie `id or vsix-path` | code --install-extension `extension-id> or <extension-vsix-path` | Installs an extension.            |
 | vscue `id or vsix-path` | code --uninstall-extension `id or vsix-path`                     | Uninstalls an extension.          |
 
-## Other options:
+## Other options
 
 | Alias        | Command                   | Description                                                                                                           |
 | ------------ | ------------------------- | --------------------------------------------------------------------------------------------------------------------- |

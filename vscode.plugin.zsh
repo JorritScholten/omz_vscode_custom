@@ -28,7 +28,15 @@ function vsc {
   if (( $# )); then
     $VSCODE $@
   else
-    $VSCODE .
+    # copied globbing file existence test from: https://unix.stackexchange.com/a/407833
+    # preferentially open folder with .code-workspace file in current directory or .vscode subdirectory if it exists
+    if ()(($#)) *.code-workspace(NY1-.); then
+      $VSCODE *.code-workspace
+    elif ()(($#)) .vscode/*.code-workspace(NY1-.); then
+      $VSCODE .vscode/*.code-workspace
+    else
+      $VSCODE .
+    fi
   fi
 }
 
